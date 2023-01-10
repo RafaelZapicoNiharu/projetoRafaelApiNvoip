@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'RobotoSlab' sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(171, 223, 243) ;
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+}
+.imagem{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cc98e0d7;
+    padding: 1rem;
+}
+img{
+    width: 51rem;
+}
+.preencher{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    padding: 2rem;
+}
+.nomeForm{
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(39, 39, 39);
+    font-size: larger;
+}
+.nomeForm h1::after{
+
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    background-color:  rgb(115, 96, 189); ;;
+}
+.enviar{
+    font-weight: 500;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: large;
+    background-color: rgb(171, 156, 226); ;
+}
+.enviar:hover{
+
+    background-color: rgb(115, 96, 189); 
+}
+
+.campos input{
+    margin: 0.6rem 0 ;
+    padding: 0.8rem 1.1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px #0000003f;
+}
+.campos input:hover{
+    background-color: aliceblue;
+}
+.campos input:focus-visible{
+    outline: 2px solid rgb(115, 96, 189);
+}
