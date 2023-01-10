@@ -16,7 +16,7 @@ const exemplosFunc = { //lista de funcionarios para exemplo
         }, {
             "nome": "Patricia Almeida",
             "mesNasc": '10',
-            "diaNasc": '28',
+            "diaNasc": '29',
             "anoNasc": '2003',
             "numero": "3299934287",
         },
@@ -45,7 +45,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     return aniversariantes;
 }
 function mandarSMS(mensagem, numero) {  //função para enviar o sms
-    let apiKey = "222" //insira sua apikey aqui para poder utilizar o serviço
+    let apiKey = "cfcd20849c853cfcd208495d565ef66e7" //insira sua apikey aqui para poder utilizar o serviço
     let urlSMS = "https://api.nvoip.com.br/v2/sms";
     let url = urlSMS + "?napikey=" + apiKey;
     var headers = new Headers();
