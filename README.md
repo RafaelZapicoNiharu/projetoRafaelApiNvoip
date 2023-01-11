@@ -1,3 +1,6 @@
+# Leia me - Descrição do projeto
+
+
 O objetivo desse projeto é implementar a API da Nvoip. Criei uma empresa fictícia para demonstrar a aplicação, com uma pagina web e uma lista curta de funcionarios para
 teste. Pensei em implementar de forma a uma empresa ter uma lista de funcionarios e/ou clientes, e utilizar essa api para enviar por SMS parabenização em seus aniversários, 
 podendo customizar a mensagem. 
