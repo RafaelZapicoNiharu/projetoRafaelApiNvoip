@@ -63,11 +63,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     let dataparte = data.split('-');
     console.log(dataparte);
     for (var funcionarios in exemplosFunc) {
-        if (funcionarios.mesNasc == dataparte[1]) {
-            if (funcionarios.diaNasc == dataparte[2]) {
-                aniversariantes.push(funcionarios);
-            }
-        }
+        console.log(funcionarios);
     }
     console.log(aniversariantes);
     return aniversariantes;
