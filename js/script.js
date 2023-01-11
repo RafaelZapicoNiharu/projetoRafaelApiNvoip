@@ -64,7 +64,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     let dataparte = data.split('-');
     console.log(dataparte);
     for (var funcionario in exemplosFunc) {
-        console.log(funcionario);
+        console.log(funcionario.nome);
     }
     console.log(aniversariantes);
     return aniversariantes;
