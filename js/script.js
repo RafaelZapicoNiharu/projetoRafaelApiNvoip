@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
        // mandarSMS(mensagem, '32998363728');
   //  }); 
   let mensagem = "tubarao te amo";
-  let numero = "3298363728";
+  let numero = "(32)998363728";
   mandarSMS(mensagem, numero);
 })
 function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
