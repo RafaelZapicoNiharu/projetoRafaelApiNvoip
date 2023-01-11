@@ -69,6 +69,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
             }
         }
     }
+    console.log(aniversariantes);
     return aniversariantes;
 }
 
