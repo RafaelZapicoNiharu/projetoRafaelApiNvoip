@@ -38,7 +38,7 @@ const exemplosFunc = [
     function validaA(event){
         const letra = String.fromCharCode(event.keyCode);
         const padroes = '[a-zA-Z!-9]';
-        if (char.match(padroes)) {
+        if (letra.match(padroes)) {
         return true;
     }
     }
