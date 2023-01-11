@@ -48,18 +48,18 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     return aniversariantes;
 }
 function mandarSMS(mensagem, numero) {  //função para enviar o sms
-    let apiKey = "cfcd20849c853cfcd208495d565ef66e7" //insira sua apikey aqui para poder utilizar o serviço
-    let urlSMS = "https://api.nvoip.com.br/v2/sms";
-    let url = urlSMS + "?napikey=" + apiKey;
+    let APIKey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
+    let BaseURL = "https://api.nvoip.com.br/v2/sms";
+    let URL = BaseURL + "?napikey=" + APIkey;
     var headers = new Headers();
     headers.append("Content-Type", "application/json");
-    var dadosBody = {
-        numeroCel: numero,
-        sms: mensagem,
-        flashsms: false
+    var bodyParameters = {
+        numberPhone: numero,
+        message: mensagem,
+        flashSms: false
     };
-    var parameters = { method: 'POST', headers: headers, body: JSON.stringify(dadosBody) };
-    fetch(url, parameters)
+    var parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
+    fetch(URL, parameters)
         .then(resolve => {
             console.log(resolve);
             window.alert("Mensagens enviadas!")
