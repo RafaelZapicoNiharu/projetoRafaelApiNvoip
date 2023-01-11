@@ -31,31 +31,19 @@ form.addEventListener("submit", (event) => {
         //    + form.Mensagem.value;
        // mandarSMS(mensagem, '32998363728');
   //  }); 
-  const mensagem = "tubarao te amo";
-  const numero = "32998363728";
-  mandarSMS(mensagem, numero);
+  const message = "tubarao te amo";
+  const number = "32998363728";
+  mandarSMS(message, number);
 })
-function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
-    let aniversariantes = [];
-    let dataparte = data.split('-');
-    for (var funcionarios in exemplosFunc) {
-        if (funcionarios.mesNasc == dataparte[1]) {
-            if (funcionarios.diaNasc == dataparte[2]) {
-                aniversariantes.push(funcionarios);
-            }
-        }
-    }
-    return aniversariantes;
-}
-function mandarSMS(mensagem, numero) {  //função para enviar o sms
+function mandarSMS(message, number) {  //função para enviar o sms
     const APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
     const BaseURL = "https://api.nvoip.com.br/v2/sms";
     const URL = BaseURL + "?napikey=" + APIkey;
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
     const bodyParameters = {
-        numberPhone: numero,
-        message: mensagem,
+        numberPhone: number,
+        message: message,
         flashSms: false
     };
     const parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
@@ -67,6 +55,27 @@ function mandarSMS(mensagem, numero) {  //função para enviar o sms
             console.error(erro);
             window.alert("Mensagens não enviadas, ocorreu um erro!")
         });
+}
+
+
+
+
+
+
+
+
+
+function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
+    let aniversariantes = [];
+    let dataparte = data.split('-');
+    for (var funcionarios in exemplosFunc) {
+        if (funcionarios.mesNasc == dataparte[1]) {
+            if (funcionarios.diaNasc == dataparte[2]) {
+                aniversariantes.push(funcionarios);
+            }
+        }
+    }
+    return aniversariantes;
 }
 
 
