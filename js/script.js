@@ -23,24 +23,34 @@ const exemplosFunc = [
 
     
     form.Mensagem.addEventListener("keypress", function(evento) {
-      var maximo = 76;
+        
+      if(!validaA(evento)){ evento.preventDefault};
+      const maximo = 76;
       tamanhoDigitado = form.Mensagem.value.length;     
       if(tamanhoDigitado >= maximo) {
           evento.preventDefault();
           window.alert("Tamanho máximo atingido");
 
       }
+     
         
     });
+    function validaA(event){
+        const letra = String.fromCharCode(event.keyCode);
+        const padroes = '[a-zA-Z!-9]';
+        if (char.match(padroes)) {
+        return true;
+    }
+    }
     
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();                                 //fazer campo pra inserir a API key 
-    let data = form.dataNascimento.value;
+    const data = form.dataNascimento.value;
   console.log(data);
-   let chave = form.apeikey.value;
+   const chave = form.apeikey.value;
     pesquisaFuncionarios(data).forEach(aniversariante => {
-        let mensagem = `Cara(o) ${aniversariante.nome}, nos da Niharu desejamos a voce um Feliz Aniversario!`
+        const mensagem = `Cara(o) ${aniversariante.nome}, nos da Niharu desejamos a voce um Feliz Aniversario!`
             + form.Mensagem.value;
         mandarSMS(mensagem, aniversariante.numero, chave);
   }); 
@@ -72,8 +82,8 @@ function mandarSMS(message, number, chave) {  //função para enviar o sms
         });
 }
 function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
-    let aniversariantes = [];
-    let dataparte = data.split('-');
+    const aniversariantes = [];
+    const dataparte = data.split('-');
     console.log(dataparte);
      exemplosFunc.forEach(func => {
 
