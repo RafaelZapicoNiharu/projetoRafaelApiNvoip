@@ -48,7 +48,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     return aniversariantes;
 }
 function mandarSMS(mensagem, numero) {  //função para enviar o sms
-    let APIKey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
+    let APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
     let BaseURL = "https://api.nvoip.com.br/v2/sms";
     let URL = BaseURL + "?napikey=" + APIkey;
     var headers = new Headers();
