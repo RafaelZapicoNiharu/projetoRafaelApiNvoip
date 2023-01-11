@@ -20,6 +20,18 @@ const exemplosFunc = [
             "numero": "32999934287",
         }
     ];
+
+    const mensagemA = document.querySelector('#inputm')
+    mensagemA.addEventListener("keypress", function(evento) {
+      var maximo = 76;
+      tamanhoDigitado = mensagemA.value.length;     
+      if(tamanhoDigitado >= maximo) {
+          e.preventDefault();
+          window.alert("máximo atingido");
+
+      }
+        
+    });
     
 
 form.addEventListener("submit", (event) => {
