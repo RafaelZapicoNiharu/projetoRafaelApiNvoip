@@ -87,3 +87,29 @@ img{
     outline: 2px solid rgb(255, 145, 0);
 }
 
+@media screen and (max-widt: 1330px) {
+    .form-image{
+        display:none;
+    }
+    .container{
+        width: 50%;
+    }
+    .preencher{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1064px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .campos{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    
+}
+
