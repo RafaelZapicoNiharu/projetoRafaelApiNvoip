@@ -31,8 +31,8 @@ form.addEventListener("submit", (event) => {
         //    + form.Mensagem.value;
        // mandarSMS(mensagem, '32998363728');
   //  }); 
-  let mensagem = "tubarao te amo";
-  let numero = "(32)998363728";
+  const mensagem = "tubarao te amo";
+  const numero = "32998363728";
   mandarSMS(mensagem, numero);
 })
 function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
@@ -48,17 +48,17 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     return aniversariantes;
 }
 function mandarSMS(mensagem, numero) {  //função para enviar o sms
-    let APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
-    let BaseURL = "https://api.nvoip.com.br/v2/sms";
-    let URL = BaseURL + "?napikey=" + APIkey;
-    var headers = new Headers();
+    const APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
+    const BaseURL = "https://api.nvoip.com.br/v2/sms";
+    const URL = BaseURL + "?napikey=" + APIkey;
+    const headers = new Headers();
     headers.append("Content-Type", "application/json");
-    var bodyParameters = {
+    const bodyParameters = {
         numberPhone: numero,
         message: mensagem,
         flashSms: false
     };
-    var parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
+    const parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
     fetch(URL, parameters)
         .then(resolve => {
             console.log(resolve);
