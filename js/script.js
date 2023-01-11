@@ -1,6 +1,6 @@
 const form = document.forms[0];
-const exemplosFunc = { //lista de funcionarios para exemplo
-    "funcionarios": [
+const exemplosFunc = [ //lista de funcionarios para exemplo
+
         {
             "nome": "Maria José",
             "mesNasc": '10',
@@ -19,9 +19,10 @@ const exemplosFunc = { //lista de funcionarios para exemplo
             "diaNasc": '28',
             "anoNasc": '2003',
             "numero": "32999934287",
-        },
-    ]
-}
+        }
+    ];
+    
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();                                 //fazer campo pra inserir a API key 
     let data = form.dataNascimento.value;
@@ -62,8 +63,8 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     let aniversariantes = [];
     let dataparte = data.split('-');
     console.log(dataparte);
-    for (var funcionarios in exemplosFunc) {
-        console.log(funcionarios);
+    for (var funcionario in exemplosFunc) {
+        console.log(funcionario);
     }
     console.log(aniversariantes);
     return aniversariantes;
