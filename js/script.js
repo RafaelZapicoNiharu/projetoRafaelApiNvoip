@@ -21,7 +21,7 @@ const exemplosFunc = [
         }
     ];
 
-    const mensagemA = document.querySelector('#inputm')
+    const mensagemA = document.querySelector('inputm')
     mensagemA.addEventListener("keypress", function(evento) {
       var maximo = 76;
       tamanhoDigitado = mensagemA.value.length;     
