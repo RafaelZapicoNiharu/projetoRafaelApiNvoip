@@ -36,7 +36,7 @@ const exemplosFunc = [
         
     });
     function validaA(event){
-        const letra = String.fromCharCode(event.keyCode);
+        const letra = String.fromCharCode(event.keyCode); // pega o keycode da tecla pressionada
         const padroes = '[a-zA-Z!-9]';
         if (letra.match(padroes)) {
         return true;
