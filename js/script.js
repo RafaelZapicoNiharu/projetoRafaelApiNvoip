@@ -26,16 +26,17 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();                                 //fazer campo pra inserir a API key 
     let data = form.dataNascimento.value;
   console.log(data);
+   let chave = form.apeikey.value;
     pesquisaFuncionarios(data).forEach(aniversariante => {
         let mensagem = `Cara(o) ${aniversariante.nome}, nos da Impeto desejamos a voce um Feliz Aniversario!`
             + form.Mensagem.value;
-        mandarSMS(mensagem, aniversariante.numero);
+        mandarSMS(mensagem, aniversariante.numero, chave);
   }); 
  
 
 })
-function mandarSMS(message, number) {  //função para enviar o sms
-    const APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
+function mandarSMS(message, number, chave) {  //função para enviar o sms
+    const APIkey = chave; //insira sua apikey aqui para poder utilizar o serviço
     const BaseURL = "https://api.nvoip.com.br/v2/sms";
     const URL = BaseURL + "?napikey=" + APIkey;
 
