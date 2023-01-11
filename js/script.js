@@ -59,8 +59,10 @@ function mandarSMS(mensagem, numero) {  //função para enviar o sms
     fetch(url, parameters)
         .then(resolve => {
             console.log(resolve);
+            window.alert("Mensagens enviadas!")
         }).catch(function (erro) {
             console.error(erro);
+            window.alert("Mensagens não enviadas, ocorreu um erro!")
         });
 }
 
