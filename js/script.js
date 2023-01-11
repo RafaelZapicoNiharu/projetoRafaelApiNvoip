@@ -26,7 +26,7 @@ const exemplosFunc = [
       var maximo = 76;
       tamanhoDigitado = form.Mensagem.value.length;     
       if(tamanhoDigitado >= maximo) {
-          e.preventDefault();
+          evento.preventDefault();
           window.alert("Tamanho máximo atingido");
 
       }
