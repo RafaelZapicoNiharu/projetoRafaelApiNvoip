@@ -65,7 +65,7 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
      exemplosFunc.forEach(func => {
 
         if(func.mesNasc==dataparte[1]){
-            if(func.diaNasc==2==dataparte[2]){
+            if(func.diaNasc==dataparte[2]){
                 aniversariantes.push(func);
             }
         }
