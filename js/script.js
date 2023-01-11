@@ -21,13 +21,13 @@ const exemplosFunc = [
         }
     ];
 
-    const mensagemA = document.querySelector('inputm')
-    mensagemA.addEventListener("keypress", function(evento) {
+    
+    form.Mensagem.addEventListener("keypress", function(evento) {
       var maximo = 76;
-      tamanhoDigitado = mensagemA.value.length;     
+      tamanhoDigitado = form.Mensagem.value.length;     
       if(tamanhoDigitado >= maximo) {
           e.preventDefault();
-          window.alert("máximo atingido");
+          window.alert("Tamanho máximo atingido");
 
       }
         
