@@ -48,11 +48,11 @@ function mandarSMS(message, number) {  //função para enviar o sms
     };
     const parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
     fetch(URL, parameters)
-        .then(resolve => {
-            console.log(resolve);
+        .then(function(response){
+            console.log(response);
             window.alert("Mensagens enviadas!")
-        }).catch(function (erro) {
-            console.error(erro);
+        }).catch(function (err) {
+            console.error(err);
             window.alert("Mensagens não enviadas, ocorreu um erro!")
         });
 }
