@@ -28,7 +28,7 @@ form.addEventListener("submit", (event) => {
   console.log(data);
     pesquisaFuncionarios(data).forEach(aniversariante => {
         let mensagem = `Cara(o) ${aniversariante.nome}, nos da Impeto desejamos a voce um Feliz Aniversario!`
-            + form.Mensagem.value;a
+            + form.Mensagem.value;
         mandarSMS(mensagem, aniversariante.numero);
   }); 
  
@@ -63,8 +63,13 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     let dataparte = data.split('-');
     console.log(dataparte);
      exemplosFunc.forEach(func => {
-    
-         console.log(func.nome);
+
+        if(func.mesNasc==dataparte[1]){
+            if(func.diaNasc==2==dataparte[2]){
+                aniversariantes.push(func);
+            }
+        }
+         
      
    });
     console.log(aniversariantes);
