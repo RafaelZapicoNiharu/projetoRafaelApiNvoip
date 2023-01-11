@@ -40,7 +40,7 @@ form.addEventListener("submit", (event) => {
   console.log(data);
    let chave = form.apeikey.value;
     pesquisaFuncionarios(data).forEach(aniversariante => {
-        let mensagem = `Cara(o) ${aniversariante.nome}, nos da Impeto desejamos a voce um Feliz Aniversario!`
+        let mensagem = `Cara(o) ${aniversariante.nome}, nos da Niharu desejamos a voce um Feliz Aniversario!`
             + form.Mensagem.value;
         mandarSMS(mensagem, aniversariante.numero, chave);
   }); 
