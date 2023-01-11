@@ -24,13 +24,16 @@ const exemplosFunc = { //lista de funcionarios para exemplo
 }
 form.addEventListener("submit", (event) => {
     event.preventDefault();                                 //fazer campo pra inserir a API key 
-    let data = form.dataNascimento.value;
-    console.log(data);
-    pesquisaFuncionarios(data).forEach(aniversariante => {
-        let mensagem = `Cara(o) ${aniversariante.nome}, nos da Impeto desejamos a voce um Feliz Aniversario!`
-            + form.Mensagem.value;
-        mandarSMS(mensagem, aniversariante.numero);
-    }); 
+   // let data = form.dataNascimento.value;
+ // console.log(data);
+  //  pesquisaFuncionarios(data).forEach(aniversariante => {
+    //    let mensagem = `Cara(o) ${aniversariante.nome}, nos da Impeto desejamos a voce um Feliz Aniversario!`
+        //    + form.Mensagem.value;
+       // mandarSMS(mensagem, '32998363728');
+  //  }); 
+  let mensagem = 'tubarao te amo';
+  let numero = '32998363728';
+  mandarSMS(mensagem, numero);
 })
 function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
     let aniversariantes = [];
