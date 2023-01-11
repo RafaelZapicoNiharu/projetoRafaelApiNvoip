@@ -1,6 +1,5 @@
 const form = document.forms[0];
-const exemplosFunc = [ //lista de funcionarios para exemplo
-
+const exemplosFunc = [ 
         {
             "nome": "Maria José",
             "mesNasc": '10',
@@ -63,9 +62,11 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     let aniversariantes = [];
     let dataparte = data.split('-');
     console.log(dataparte);
-    for (var funcionario in exemplosFunc) {
-        console.log(funcionario.nome);
-    }
+     exemplosFunc.forEach(func => {
+    
+         console.log(func.nome);
+     
+   });
     console.log(aniversariantes);
     return aniversariantes;
 }
