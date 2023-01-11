@@ -1,4 +1,4 @@
-//const form = document.forms[0];
+const form = document.forms[0];
 /*const exemplosFunc = { //lista de funcionarios para exemplo
     "funcionarios": [
         {
