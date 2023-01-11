@@ -1,5 +1,5 @@
-const form = document.forms[0];
-const exemplosFunc = { //lista de funcionarios para exemplo
+//const form = document.forms[0];
+/*const exemplosFunc = { //lista de funcionarios para exemplo
     "funcionarios": [
         {
             "nome": "Maria José",
@@ -21,7 +21,7 @@ const exemplosFunc = { //lista de funcionarios para exemplo
             "numero": "3299934287",
         },
     ]
-}
+}*/
 form.addEventListener("submit", (event) => {
     event.preventDefault();                                 //fazer campo pra inserir a API key 
    // let data = form.dataNascimento.value;
@@ -31,21 +31,23 @@ form.addEventListener("submit", (event) => {
         //    + form.Mensagem.value;a
        // mandarSMS(mensagem, '32998363728');
   //  }); 
-  const message = "tubarao te amo";
-  const number = "32998363728";
-  mandarSMS(message, number);
+ 
+  mandarSMS("teste", "32998363728");
 })
 function mandarSMS(message, number) {  //função para enviar o sms
     const APIkey = "cfcd20849c853cfcd208495d565ef66e7"; //insira sua apikey aqui para poder utilizar o serviço
     const BaseURL = "https://api.nvoip.com.br/v2/sms";
     const URL = BaseURL + "?napikey=" + APIkey;
+
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
+
     const bodyParameters = {
         numberPhone: number,
         message: message,
         flashSms: false
     };
+
     const parameters = { method: 'POST', headers: headers, body: JSON.stringify(bodyParameters) };
     fetch(URL, parameters)
         .then(function(response){
@@ -65,7 +67,7 @@ function mandarSMS(message, number) {  //função para enviar o sms
 
 
 
-function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
+/*function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversario naquele dia
     let aniversariantes = [];
     let dataparte = data.split('-');
     for (var funcionarios in exemplosFunc) {
@@ -78,6 +80,6 @@ function pesquisaFuncionarios(data) { //acha os funcionarios que fazem aniversar
     return aniversariantes;
 }
 
-
+*/
 
 
