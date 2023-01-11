@@ -24,7 +24,7 @@ const exemplosFunc = [
     
     form.Mensagem.addEventListener("keypress", function(evento) {
         
-      if(!validaA(evento)){ evento.preventDefault};
+
       const maximo = 76;
       tamanhoDigitado = form.Mensagem.value.length;     
       if(tamanhoDigitado >= maximo) {
@@ -35,13 +35,7 @@ const exemplosFunc = [
      
         
     });
-    function validaA(event){
-        const letra = String.fromCharCode(event.keyCode);
-        const padroes = '[a-zA-Z0-9]';
-        if (letra.match(padroes)) {
-        return true;
-    }else{return false;}
-    }
+ 
     
 
 form.addEventListener("submit", (event) => {
